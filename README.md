@@ -18,9 +18,9 @@ MyFinance is a Flutter-based mobile application that helps users manage their pe
 
 ## 🚀 **Tech Stack**
 - **Frontend:** Flutter (Dart)
-- **Backend:** Firebase (Authentication and Database)
+- **Backend:** Firebase (Authentication)
+- **Database:** SQLite
 - **State Management:** Provider
-- **Database:** Firestore
 - **Charts:** FL Chart
 
 ---
