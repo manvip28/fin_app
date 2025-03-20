@@ -166,5 +166,5 @@ This project is licensed under the MIT License.
 ---
 
 ## 📧 **Contact**
-For any inquiries, feel free to reach out to [Manvitha Pentapati](mailto:manvipentapati@example.com).
+For any inquiries, feel free to reach out to me.
 
