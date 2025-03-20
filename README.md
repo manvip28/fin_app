@@ -40,16 +40,31 @@ MyFinance is a Flutter-based mobile application that helps users manage their pe
     cd MyFinance
     ```
 
-2. Install dependencies:
+2. Install dependencies using **flutter pub get**:
     ```bash
     flutter pub get
     ```
+    This will fetch all the necessary packages defined in your `pubspec.yaml` file.
 
-3. Configure Firebase:
-    - Add your `google-services.json` for Android or `GoogleService-Info.plist` for iOS.
-    - Enable Email/Password authentication in Firebase.
+### Configuring Firebase with FlutterFire
 
-4. Update **android/app/build.gradle** with the following:
+1. Install FlutterFire CLI:
+    ```bash
+    dart pub global activate flutterfire_cli
+    ```
+2. Configure Firebase using FlutterFire CLI:
+    ```bash
+    flutterfire configure
+    ```
+    Follow the instructions to select your Firebase project and configure it for Android and iOS.
+
+3. Add your `google-services.json` for Android or `GoogleService-Info.plist` for iOS.
+
+4. Enable Email/Password authentication in Firebase.
+
+### Update Gradle Files
+
+- Update **android/app/build.gradle** with the following:
     ```gradle
     dependencies {
         implementation platform('com.google.firebase:firebase-bom:32.7.0')
@@ -60,7 +75,7 @@ MyFinance is a Flutter-based mobile application that helps users manage their pe
     ```
     Ensure `apply plugin: 'com.google.gms.google-services'` is added at the bottom of `android/app/build.gradle`.
 
-5. Update **android/build.gradle** with the following dependency in the `buildscript` section:
+- Update **android/build.gradle** with the following dependency in the `buildscript` section:
     ```gradle
     dependencies {
         classpath 'com.google.gms:google-services:4.4.1' // Ensure correct placement
@@ -75,6 +90,17 @@ Firebase requires SHA-1 or SHA-256 keys for authentication and verification. Fol
     ```
 2. Copy the SHA1 or SHA256 key.
 3. Go to your Firebase Console → Project Settings → Add Fingerprint → Paste the SHA key.
+
+### Assets Management
+- Ensure images are added to the `assets/images` folder.
+- Example image assets include `images/profile.png` and `images/logo.png`.
+- Declare assets in `pubspec.yaml` like this:
+    ```yaml
+    flutter:
+      assets:
+        - images/profile.png
+        - images/logo.png
+    ```
 
 6. Run the app:
     ```bash
@@ -96,6 +122,7 @@ Firebase requires SHA-1 or SHA-256 keys for authentication and verification. Fol
 4. If using Firebase, ensure that the Firebase emulator or real-time services are active.
 
 ---
+
 
 ## 🛡 **Security**
 - Secure authentication using Firebase Authentication.
@@ -138,4 +165,6 @@ This project is licensed under the MIT License.
 
 ---
 
+## 📧 **Contact**
+For any inquiries, feel free to reach out to [Manvitha Pentapati](mailto:manvipentapati@example.com).
 
